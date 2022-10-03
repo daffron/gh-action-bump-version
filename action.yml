@@ -70,6 +70,10 @@ inputs:
     description: '[DEPRECATED] Set to false to skip pushing the new tag'
     default: 'true'
     required: false
+  labels:
+    description: 'Labels passed in from the current PR'
+    default: ''
+    required: false
 outputs:
   newTag:
     description: 'The newly created tag'
