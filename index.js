@@ -14,6 +14,8 @@ const workspace = process.env.GITHUB_WORKSPACE;
 const pkg = getPackageJson();
 
 (async () => {
+  console.log('ENVS')
+  console.log(JSON.stringify(process.env, null, 2))
   const event = process.env.GITHUB_EVENT_PATH ? require(process.env.GITHUB_EVENT_PATH) : {};
 
   if (!event.commits && !process.env['INPUT_VERSION-TYPE']) {
